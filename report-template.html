@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSafe | Forensic Exposure Audit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        .audit-header { border-bottom: 2px solid var(--navy); padding-bottom: 20px; margin-bottom: 40px; }
+        .status-badge { background: #fee2e2; color: #991b1b; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        .report-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
+        .data-table th { text-align: left; background: var(--light); padding: 10px; border: 1px solid var(--border); }
+        .data-table td { padding: 10px; border: 1px solid var(--border); }
+        .exposed { color: #dc2626; font-weight: 700; }
+        .secure { color: #16a34a; }
+        .sidebar-box { background: var(--navy); color: white; padding: 25px; border-radius: 8px; position: sticky; top: 20px; }
+        .price-tag { font-size: 2rem; color: var(--gold); display: block; margin: 10px 0; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="audit-page">
+
+<header class="no-print">
+    <div class="container flex-header">
+        <span class="logo-text">DataSafe<span class="gold">.</span>Support</span>
+        <button onclick="window.print()" class="btn-outline">Download PDF Report</button>
+    </div>
+</header>
+
+<main class="container" style="padding: 60px 20px;">
+    <div class="audit-header">
+        <span class="status-badge">High Risk Exposure Detected</span>
+        <h1>Forensic Audit: Case #DS-8821-44</h1>
+        <p class="muted">Generated on: March 22, 2026 | Location: Sydney, AU Node</p>
+    </div>
+
+    <div class="report-grid">
+        <div class="report-main">
+            <h3>Exposure Intelligence</h3>
+            <p>Our analysts have identified your personal identifiers within a verified exfiltration from a <strong>Major Australian Financial Institution</strong>. This data was observed circulating on non-indexed clearing sites on March 18, 2026.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Identifier Type</th>
+                        <th>Status</th>
+                        <th>Risk Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Full Legal Name</td>
+                        <td class="exposed">EXPOSED</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Medicare Number</td>
+                        <td class="exposed">EXPOSED (PARTIAL)</td>
+                        <td>Critical</td>
+                    </tr>
+                    <tr>
+                        <td>Residential Address</td>
+                        <td class="exposed">EXPOSED</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td class="exposed">EXPOSED</td>
+                        <td>Critical</td>
+                    </tr>
+                    <tr>
+                        <td>Account Password (Hashed)</td>
+                        <td class="secure">ENCRYPTED</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="risk-assessment" style="margin-top: 40px; border-left: 4px solid var(--gold); padding-left: 20px;">
+                <h4>Primary Threat: Asset Seizure</h4>
+                <p>The combination of your full name, DOB, and Medicare details is currently the "Gold Standard" for identity theft in Australia. This data is sufficient to bypass phone-based verification for bank account access and sub-prime loan applications.</p>
+            </div>
+        </div>
+
+        <aside class="sidebar-box">
+            <h4>Immediate Triage Required</h4>
+            <p>Your data is currently "Active" in trade. You have approximately 48-72 hours to secure your accounts before secondary exploitation occurs.</p>
+            
+            <hr style="opacity: 0.2; margin: 20px 0;">
+            
+            <h5>DataSafe Shield Plus</h5>
+            <span class="price-tag">$19.99 AUD</span>
+            <ul style="font-size: 0.85rem; padding-left: 15px;">
+                <li>Step-by-step Credit Freeze Guide</li>
+                <li>Telecommunication Lock Procedure</li>
+                <li>Official Breach Notification Letter for your Bank</li>
+            </ul>
+            <button class="btn-primary" style="width: 100%; margin-top: 15px; background: var(--gold); color: var(--navy);">Upgrade to Shield Plus</button>
+            <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.7;">Payment via Bank Transfer Only. Reference: DS-8821-44</p>
+        </aside>
+    </div>
+</main>
+
+<footer class="no-print">
+    <div class="container">
+        <p>&copy; 2026 DataSafe Support. Forensic Audit Data provided for information purposes only.</p>
+    </div>
+</footer>
+
+</body>
+</html>
